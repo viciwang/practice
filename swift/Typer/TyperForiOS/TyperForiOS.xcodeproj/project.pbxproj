@@ -12,6 +12,9 @@
 		FACEC67D1E8CF10700E90BD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACEC67A1E8CF10700E90BD3 /* Main.storyboard */; };
 		FACEC67F1E8CF11000E90BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACEC67E1E8CF11000E90BD3 /* Assets.xcassets */; };
 		FACEC6811E8CF12000E90BD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC6801E8CF12000E90BD3 /* AppDelegate.swift */; };
+		FACEC6841E8CF40700E90BD3 /* Central.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC6831E8CF40700E90BD3 /* Central.swift */; };
+		FACEC6861E8D109C00E90BD3 /* Peripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC6851E8D109C00E90BD3 /* Peripheral.swift */; };
+		FACEC6881E8D257400E90BD3 /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC6871E8D257400E90BD3 /* Bluetooth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		FACEC67B1E8CF10700E90BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FACEC67E1E8CF11000E90BD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		FACEC6801E8CF12000E90BD3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Main/AppDelegate.swift; sourceTree = "<group>"; };
+		FACEC6831E8CF40700E90BD3 /* Central.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Central.swift; path = Modules/CoreBluetooth/Central.swift; sourceTree = "<group>"; };
+		FACEC6851E8D109C00E90BD3 /* Peripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Peripheral.swift; path = Modules/CoreBluetooth/Peripheral.swift; sourceTree = "<group>"; };
+		FACEC6871E8D257400E90BD3 /* Bluetooth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bluetooth.swift; path = Modules/CoreBluetooth/Bluetooth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		FACEC65D1E8CF01200E90BD3 /* TyperForiOS */ = {
 			isa = PBXGroup;
 			children = (
+				FACEC6821E8CF38900E90BD3 /* Bluetooth */,
 				FACEC6721E8CF0CE00E90BD3 /* Modules */,
 				FACEC6711E8CF0C500E90BD3 /* Resources */,
 				FACEC6701E8CF0BE00E90BD3 /* Main */,
@@ -88,6 +95,16 @@
 				FACEC6731E8CF0E400E90BD3 /* TyperForiOS-Bridging-Header.h */,
 			);
 			name = Modules;
+			sourceTree = "<group>";
+		};
+		FACEC6821E8CF38900E90BD3 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				FACEC6831E8CF40700E90BD3 /* Central.swift */,
+				FACEC6851E8D109C00E90BD3 /* Peripheral.swift */,
+				FACEC6871E8D257400E90BD3 /* Bluetooth.swift */,
+			);
+			name = Bluetooth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,7 +182,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACEC6811E8CF12000E90BD3 /* AppDelegate.swift in Sources */,
+				FACEC6881E8D257400E90BD3 /* Bluetooth.swift in Sources */,
 				FACEC6751E8CF0E400E90BD3 /* ViewController.swift in Sources */,
+				FACEC6841E8CF40700E90BD3 /* Central.swift in Sources */,
+				FACEC6861E8D109C00E90BD3 /* Peripheral.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
