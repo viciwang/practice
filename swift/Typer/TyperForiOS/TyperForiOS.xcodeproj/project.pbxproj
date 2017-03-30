@@ -1,0 +1,342 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FACEC6751E8CF0E400E90BD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC6741E8CF0E400E90BD3 /* ViewController.swift */; };
+		FACEC67C1E8CF10700E90BD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACEC6781E8CF10700E90BD3 /* LaunchScreen.storyboard */; };
+		FACEC67D1E8CF10700E90BD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACEC67A1E8CF10700E90BD3 /* Main.storyboard */; };
+		FACEC67F1E8CF11000E90BD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACEC67E1E8CF11000E90BD3 /* Assets.xcassets */; };
+		FACEC6811E8CF12000E90BD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEC6801E8CF12000E90BD3 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FACEC65B1E8CF01200E90BD3 /* TyperForiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TyperForiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FACEC6731E8CF0E400E90BD3 /* TyperForiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TyperForiOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		FACEC6741E8CF0E400E90BD3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Modules/ViewController.swift; sourceTree = "<group>"; };
+		FACEC6761E8CF0FA00E90BD3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
+		FACEC6791E8CF10700E90BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FACEC67B1E8CF10700E90BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Resources/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FACEC67E1E8CF11000E90BD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
+		FACEC6801E8CF12000E90BD3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Main/AppDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FACEC6581E8CF01200E90BD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FACEC6521E8CF01200E90BD3 = {
+			isa = PBXGroup;
+			children = (
+				FACEC65D1E8CF01200E90BD3 /* TyperForiOS */,
+				FACEC65C1E8CF01200E90BD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FACEC65C1E8CF01200E90BD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FACEC65B1E8CF01200E90BD3 /* TyperForiOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FACEC65D1E8CF01200E90BD3 /* TyperForiOS */ = {
+			isa = PBXGroup;
+			children = (
+				FACEC6721E8CF0CE00E90BD3 /* Modules */,
+				FACEC6711E8CF0C500E90BD3 /* Resources */,
+				FACEC6701E8CF0BE00E90BD3 /* Main */,
+			);
+			path = TyperForiOS;
+			sourceTree = "<group>";
+		};
+		FACEC6701E8CF0BE00E90BD3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FACEC6801E8CF12000E90BD3 /* AppDelegate.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		FACEC6711E8CF0C500E90BD3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FACEC67E1E8CF11000E90BD3 /* Assets.xcassets */,
+				FACEC6781E8CF10700E90BD3 /* LaunchScreen.storyboard */,
+				FACEC67A1E8CF10700E90BD3 /* Main.storyboard */,
+				FACEC6761E8CF0FA00E90BD3 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FACEC6721E8CF0CE00E90BD3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FACEC6741E8CF0E400E90BD3 /* ViewController.swift */,
+				FACEC6731E8CF0E400E90BD3 /* TyperForiOS-Bridging-Header.h */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FACEC65A1E8CF01200E90BD3 /* TyperForiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FACEC66D1E8CF01200E90BD3 /* Build configuration list for PBXNativeTarget "TyperForiOS" */;
+			buildPhases = (
+				FACEC6571E8CF01200E90BD3 /* Sources */,
+				FACEC6581E8CF01200E90BD3 /* Frameworks */,
+				FACEC6591E8CF01200E90BD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TyperForiOS;
+			productName = TyperForiOS;
+			productReference = FACEC65B1E8CF01200E90BD3 /* TyperForiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FACEC6531E8CF01200E90BD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Allen;
+				TargetAttributes = {
+					FACEC65A1E8CF01200E90BD3 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = JX5LFX27DB;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FACEC6561E8CF01200E90BD3 /* Build configuration list for PBXProject "TyperForiOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FACEC6521E8CF01200E90BD3;
+			productRefGroup = FACEC65C1E8CF01200E90BD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FACEC65A1E8CF01200E90BD3 /* TyperForiOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FACEC6591E8CF01200E90BD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACEC67D1E8CF10700E90BD3 /* Main.storyboard in Resources */,
+				FACEC67F1E8CF11000E90BD3 /* Assets.xcassets in Resources */,
+				FACEC67C1E8CF10700E90BD3 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FACEC6571E8CF01200E90BD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FACEC6811E8CF12000E90BD3 /* AppDelegate.swift in Sources */,
+				FACEC6751E8CF0E400E90BD3 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FACEC6781E8CF10700E90BD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACEC6791E8CF10700E90BD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FACEC67A1E8CF10700E90BD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FACEC67B1E8CF10700E90BD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FACEC66B1E8CF01200E90BD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FACEC66C1E8CF01200E90BD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FACEC66E1E8CF01200E90BD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = JX5LFX27DB;
+				INFOPLIST_FILE = "$(SRCROOT)/TyperForiOS/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.allen.TyperForiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TyperForiOS/TyperForiOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FACEC66F1E8CF01200E90BD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = JX5LFX27DB;
+				INFOPLIST_FILE = "$(SRCROOT)/TyperForiOS/Resources/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.allen.TyperForiOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TyperForiOS/TyperForiOS-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FACEC6561E8CF01200E90BD3 /* Build configuration list for PBXProject "TyperForiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACEC66B1E8CF01200E90BD3 /* Debug */,
+				FACEC66C1E8CF01200E90BD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FACEC66D1E8CF01200E90BD3 /* Build configuration list for PBXNativeTarget "TyperForiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FACEC66E1E8CF01200E90BD3 /* Debug */,
+				FACEC66F1E8CF01200E90BD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FACEC6531E8CF01200E90BD3 /* Project object */;
+}
