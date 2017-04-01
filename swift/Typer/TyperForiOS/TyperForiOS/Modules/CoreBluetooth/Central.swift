@@ -76,7 +76,7 @@ extension Central: CBPeripheralDelegate {
         }
         
         for  service in peripheral.services! {
-            if service.uuid == TYPER_SERVICE_UUID {
+            if service.uuid == ServiceUUID {
                 peripheral.discoverCharacteristics(nil, for: service)
             }
         }
@@ -90,7 +90,7 @@ extension Central: CBPeripheralDelegate {
         }
         
         for characteristics in service.characteristics! {
-            if characteristics.uuid == TYPER_CHARACTERISTIC_UUID {
+            if characteristics.uuid == CharacteristicUUID {
                 peripheral.setNotifyValue(true, for: characteristics)
             }
         }
@@ -99,7 +99,7 @@ extension Central: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral,
                     didUpdateValueFor characteristic: CBCharacteristic,
                     error: Error?) {
-        if characteristic.uuid == TYPER_CHARACTERISTIC_UUID {
+        if characteristic.uuid == CharacteristicUUID {
 //            characteristic.value
         }
     }
