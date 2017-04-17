@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "iojs"
+  - "node"
+  - "7"
+before_install:
+  - cd ./node/bugly-statistic/
+script:
+  - node index.js ./crash-weekly.json ./crash-weekly-recently.json
