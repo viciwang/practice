@@ -10,8 +10,8 @@
             "name": "Launch Program",
             "program": "${file}",
             "args": [
-                "/Users/wgl/Desktop/crash-weekly.json",
-                "/Users/wgl/Desktop/crash-weekly-recently.json"
+                "./crash-weekly.json",
+                "./crash-weekly-recently.json"
             ]
         },
         {
