@@ -18,6 +18,7 @@ var dbOptions = {
 var index = require('./routes/index');
 var users = require('./routes/users');
 var discover = require('./routes/discover');
+var admin = require('./routes/admin');
 
 var app = express();
 
@@ -34,11 +35,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // mysql
-app.use(myConnection(mysql, dbOptions, 'single'));
+// app.use(myConnection(mysql, dbOptions, 'single'));
 
 app.use('/', index);
 app.use('/users', users);
 app.use('/discover', discover);
+app.use('/admin', admin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
