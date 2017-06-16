@@ -5,6 +5,7 @@ require("./helpers/setup");
 var wd = require("wd"),
     _ = require('underscore'),
     Q = require('q'),
+    _p = require('./helpers/promise-utils'),
     serverConfigs = require('./helpers/appium-servers');
 
 describe("ios simple", function () {
@@ -65,7 +66,19 @@ describe("ios simple", function () {
             .text().should.become("" + sum);
       });
     // return driver.sleep(10000).elementByAccessiblilityId('我的蜂巢').click();
-
+    // return driver
+    //   .sleep(10000)
+    //   .elementByName('我的蜂巢')
+    //   .click()
+    //   .sleep(1000)
+    //   // .elementByClassName('XCUIElementTypeTable')
+    //   // .elementsByClassName('>','XCUIElementTypeCell')
+    //   // .then();
+    //   .elementByName('推荐有奖')
+    //   .click()
+    //   .sleep(3000)
+    //   .elementByClassName('XCUIElementTypeButton')
+    //   .click();
   });
 
 });
