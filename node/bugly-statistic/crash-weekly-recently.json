@@ -1,1 +1,86 @@
-{"status":200,"msg":"ok","ret":{"data":[{"appId":"900002830","platformId":2,"version":"5.0.0%285.0.0.1%29","date":"20170410","type":"crash","crashNum":16,"crashUser":12,"accessNum":22807,"accessUser":8875},{"appId":"900002830","platformId":2,"version":"5.0.0%285.0.0.1%29","date":"20170411","type":"crash","crashNum":15,"crashUser":11,"accessNum":25713,"accessUser":9205},{"appId":"900002830","platformId":2,"version":"5.0.0%285.0.0.1%29","date":"20170412","type":"crash","crashNum":10,"crashUser":10,"accessNum":23813,"accessUser":8905},{"appId":"900002830","platformId":2,"version":"5.0.0%285.0.0.1%29","date":"20170413","type":"crash","crashNum":6,"crashUser":6,"accessNum":23633,"accessUser":9012},{"appId":"900002830","platformId":2,"version":"5.0.0%285.0.0.1%29","date":"20170414","type":"crash","crashNum":7,"crashUser":6,"accessNum":23586,"accessUser":8782},{"appId":"900002830","platformId":2,"version":"5.0.0%285.0.0.1%29","date":"20170415","type":"crash","crashNum":16,"crashUser":16,"accessNum":21819,"accessUser":8478},{"appId":"900002830","platformId":2,"version":"5.0.0%285.0.0.1%29","date":"20170416","type":"crash","crashNum":37,"crashUser":35,"accessNum":34120,"accessUser":10401}],"code":200}}
+{
+    "status": 200,
+    "msg": "ok",
+    "ret": {
+        "data": [
+            {
+                "appId": "900002830",
+                "platformId": 2,
+                "version": "5.0.0%285.0.0.1%29",
+                "date": "20170410",
+                "type": "crash",
+                "crashNum": 16,
+                "crashUser": 12,
+                "accessNum": 22807,
+                "accessUser": 8875
+            },
+            {
+                "appId": "900002830",
+                "platformId": 2,
+                "version": "5.0.0%285.0.0.1%29",
+                "date": "20170411",
+                "type": "crash",
+                "crashNum": 15,
+                "crashUser": 11,
+                "accessNum": 25713,
+                "accessUser": 9205
+            },
+            {
+                "appId": "900002830",
+                "platformId": 2,
+                "version": "5.0.0%285.0.0.1%29",
+                "date": "20170412",
+                "type": "crash",
+                "crashNum": 10,
+                "crashUser": 10,
+                "accessNum": 23813,
+                "accessUser": 8905
+            },
+            {
+                "appId": "900002830",
+                "platformId": 2,
+                "version": "5.0.0%285.0.0.1%29",
+                "date": "20170413",
+                "type": "crash",
+                "crashNum": 6,
+                "crashUser": 6,
+                "accessNum": 23633,
+                "accessUser": 9012
+            },
+            {
+                "appId": "900002830",
+                "platformId": 2,
+                "version": "5.0.0%285.0.0.1%29",
+                "date": "20170414",
+                "type": "crash",
+                "crashNum": 7,
+                "crashUser": 6,
+                "accessNum": 23586,
+                "accessUser": 8782
+            },
+            {
+                "appId": "900002830",
+                "platformId": 2,
+                "version": "5.0.0%285.0.0.1%29",
+                "date": "20170415",
+                "type": "crash",
+                "crashNum": 16,
+                "crashUser": 16,
+                "accessNum": 21819,
+                "accessUser": 8478
+            },
+            {
+                "appId": "900002830",
+                "platformId": 2,
+                "version": "5.0.0%285.0.0.1%29",
+                "date": "20170416",
+                "type": "crash",
+                "crashNum": 37,
+                "crashUser": 35,
+                "accessNum": 34120,
+                "accessUser": 10401
+            }
+        ],
+        "code": 200
+    }
+}

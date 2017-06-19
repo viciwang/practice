@@ -57,17 +57,17 @@ describe("ios simple", function () {
   }
 
   it("should compute the sum", function () {
-    return driver
-      .resolve(populate()).then(function (sum) {
-        return driver.
-          elementByAccessibilityId('ComputeSumButton')
-            .click().sleep(1000)
-          .elementByAccessibilityId('Answer')
-            .text().should.become("" + sum);
-      });
+    // return driver
+    //   .resolve(populate()).then(function (sum) {
+    //     return driver.
+    //       elementByAccessibilityId('ComputeSumButton')
+    //         .click().sleep(1000)
+    //       .elementByAccessibilityId('Answer')
+    //         .text().should.become("" + sum);
+    //   });
     // return driver.sleep(10000).elementByAccessiblilityId('我的蜂巢').click();
     // return driver
-    //   .sleep(10000)
+    //   .sleep(1000)
     //   .elementByName('我的蜂巢')
     //   .click()
     //   .sleep(1000)
@@ -79,6 +79,13 @@ describe("ios simple", function () {
     //   .sleep(3000)
     //   .elementByClassName('XCUIElementTypeButton')
     //   .click();
+    return driver
+      .hasElementByName('开启 乐蜂美妆')
+      .then((has) => {
+        if(has) {
+          driver.hasElementByName('')
+        }
+      }
   });
 
 });

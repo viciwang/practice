@@ -15,5 +15,5 @@
 //   exports.androidApiDemosLocal = "http://localhost:3000/ApiDemos-debug.apk";
 // }
 
-// exports.iosTestApp = "/Users/wgl/Library/Developer/Xcode/DerivedData/LeFeng-axnsmwvnrzunkjbjehtrkwjtbify/Build/Products/Debug-iphonesimulator/LeFeng.app";
-exports.iosTestApp = "/Users/wgl/github/practice/node/appium-ios/app/TestApp.app"
+exports.iosTestApp = "/Users/wgl/Library/Developer/Xcode/DerivedData/LeFeng-axnsmwvnrzunkjbjehtrkwjtbify/Build/Products/Debug-iphonesimulator/LeFeng.app";
+// exports.iosTestApp = "/Users/wgl/github/practice/node/appium-ios/app/TestApp.app"
