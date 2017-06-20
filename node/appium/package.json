@@ -1,0 +1,23 @@
+{
+  "name": "appium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "login": "mocha src/cases/LoginCase.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yiewd": "0.6.0"
+  },
+  "devDependencies": {
+    "chai": "4.0.2",
+    "chai-as-promised": "7.0.0",
+    "color": "1.0.3",
+    "mocha": "3.4.2",
+    "underscore": "1.8.3",
+    "wd": "1.2.0"
+  }
+}

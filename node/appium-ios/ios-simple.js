@@ -66,26 +66,26 @@ describe("ios simple", function () {
     //         .text().should.become("" + sum);
     //   });
     // return driver.sleep(10000).elementByAccessiblilityId('我的蜂巢').click();
-    // return driver
-    //   .sleep(1000)
-    //   .elementByName('我的蜂巢')
-    //   .click()
-    //   .sleep(1000)
-    //   // .elementByClassName('XCUIElementTypeTable')
-    //   // .elementsByClassName('>','XCUIElementTypeCell')
-    //   // .then();
-    //   .elementByName('推荐有奖')
-    //   .click()
-    //   .sleep(3000)
-    //   .elementByClassName('XCUIElementTypeButton')
-    //   .click();
     return driver
-      .hasElementByName('开启 乐蜂美妆')
-      .then((has) => {
-        if(has) {
-          driver.hasElementByName('')
-        }
-      }
+      .sleep(1000)
+      .elementByName('我的蜂巢')
+      .click()
+      .sleep(1000)
+      // .elementByClassName('XCUIElementTypeTable')
+      // .elementsByClassName('>','XCUIElementTypeCell')
+      // .then();
+      .elementByName('推荐有奖')
+      .click()
+      .sleep(3000)
+      .elementByClassName('XCUIElementTypeButton')
+      .click();
+    // return driver
+    //   .hasElementByName('开启 乐蜂美妆')
+    //   .then((has) => {
+    //     if(has) {
+    //       driver.hasElementByName('')
+    //     }
+    //   }
   });
 
 });
