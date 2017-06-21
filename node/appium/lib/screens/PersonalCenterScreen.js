@@ -16,10 +16,10 @@ class PersonalCenterScreen extends _BaseScreen2.default {
     }
 
     *clickLoginButton() {
-        var ele = yield this.driver.elementByNameIfExists('登录/注册');
+        var ele = this.driver.elementByNameIfExists('登录/注册');
         if (ele) {
             console.log('login button click');
-            yield ele.click();
+            ele.click();
         }
     }
 }

@@ -1,7 +1,10 @@
 var app = require('../app');
 var driver = app.driver;
+var _p = require('../utils/helpers/promise-utils')
 import StartScreen from '../screens/StartScreen';
 import PersonalCenterScreen from '../screens/PersonalCenterScreen';
+
+require("../utils/helpers/setup");
 
 describe("login", function () {
     this.timeout(300000);
@@ -9,44 +12,61 @@ describe("login", function () {
     var personalCenterScreen = new PersonalCenterScreen(driver);
 
     // global setUp, tearDown
-    before(function (done) {
-        driver.run(function* () {
-            yield* app.connect();
-            yield* startScreen.closeStartButton();
-            // yield driver.sleep(1000);
-            var ele = yield driver.elementByName('我的蜂巢');
-            yield ele.click();
-            done();
-        });
+    before(function () {
+        return app.connect()
+            .then(() => {
+                return startScreen.closeStartButton();
+            })
+            .elementByName('我的蜂巢')
+            .click();
     });
 
-    after(function (done) {
-        driver.run(function* () {
-            yield driver.quit();
-            done();
-        });
+    after(function () {
+        return driver.quit();
     });
 
-    it('should have 11 cells; 我的蜂巢要有11个cell', function (done) {
-        driver.run(function* () {
-            var elements = yield driver
-                .elementByClassName('XCUIElementTypeTable')
-                .elementsByClassName('>', 'XCUIElementTypeCell');
-            elements.should.have.lengthOf(11);
-            var titles = ['我的优惠券', '我的花粉', '我的银行卡', '我的收藏', '浏览记录', '推荐有奖', '意见反馈', '联系客服', '关于乐蜂'];
-            for (var index = 2; index < 11; index++) {
-                // var e = yield elements[index].elementsByClassName('>', 'XCUIElementTypeStaticText').first();
-                // yield console.log(e.getAttribute('value'));
-                // yield e.getAttribute('value').should.equal(titles[index - 2]);
-            }
-            done();
-        });
+    it('should have 11 cells; 我的蜂巢要有11个cell', function () {
+        return driver
+            .elementByClassName('XCUIElementTypeTable')
+            .elementsByClassName('>', 'XCUIElementTypeCell')
+            .then((els) => {
+                els.should.have.lengthOf(11);
+                return els;
+            });
+        // .then(_p.each((el, i) => {
+        //     return driver
+        //         .elementByClassNameIfExists('XCUIElementTypeTable')
+        //         .then(() => {
+        //             return el;
+        //         })
+        //         .elementsByClassName('>', 'XCUIElementTypeStaticText')
+        //         // various checks
+        //         .first().getAttribute('value')
+        //         .then((title) => {
+        //             console.log(title);
+        //             return driver;
+        //         });
+        // }));
     });
 
-    it('should do another thing', function (done) {
-        driver.run(function* () {
-            done();
-        });
-    });
-
+    it('should print cell name in order', function () {
+        return driver
+            .elementByClassName('XCUIElementTypeTable')
+            .elementsByClassName('>', 'XCUIElementTypeCell')
+            .then(() => {
+                var cell = driver.at('<', 0);
+                return Q.all([
+                    cell.elementsByClassName('>', 'XCUIElementTypeStaticText')
+                        .first().getAttribute('value')
+                        .then((title) => {
+                            console.log(title);
+                        })]);
+            });
+    })
+    // .elementsByClassName('>', 'XCUIElementTypeStaticText')
+    // // various checks
+    // .first().getAttribute('value')
+    // .then((title) => {
+    //     console.log(title);
+    // });
 });

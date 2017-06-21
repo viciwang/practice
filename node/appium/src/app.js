@@ -1,17 +1,20 @@
-var yiewd = require('yiewd');
+var wd = require('wd');
 var _ = require('underscore');
 require("./utils/helpers/setup");
 
 class App {
     constructor() {
-        this.driver = yiewd.remote('localhost', 4723);
+        this.driver = wd.promiseChainRemote({
+            host: 'localhost',
+            port: 4723
+        });
         require("./utils/helpers/logging").configure(this.driver);
     }
 
-    *connect() {
+    connect() {
         var desired = _.clone(require('./caps').iosLatest);
         desired.app = require('./appPath').lefengTestApp;
-        yield this.driver.init(desired);
+        return this.driver.init(desired);
     }
 }
 
