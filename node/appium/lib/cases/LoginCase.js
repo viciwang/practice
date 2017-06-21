@@ -1,12 +1,23 @@
+'use strict';
+
+var _StartScreen = require('../screens/StartScreen');
+
+var _StartScreen2 = _interopRequireDefault(_StartScreen);
+
+var _PersonalCenterScreen = require('../screens/PersonalCenterScreen');
+
+var _PersonalCenterScreen2 = _interopRequireDefault(_PersonalCenterScreen);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 var app = require('../app');
 var driver = app.driver;
-import StartScreen from '../screens/StartScreen';
-import PersonalCenterScreen from '../screens/PersonalCenterScreen';
+
 
 describe("login", function () {
     this.timeout(300000);
-    var startScreen = new StartScreen(driver);
-    var personalCenterScreen = new PersonalCenterScreen(driver);
+    var startScreen = new _StartScreen2.default(driver);
+    var personalCenterScreen = new _PersonalCenterScreen2.default(driver);
 
     // global setUp, tearDown
     before(function (done) {
@@ -32,16 +43,15 @@ describe("login", function () {
 
     it('should do another thing', function (done) {
         driver.run(function* () {
-            yield *startScreen.closeStartButton();
+            yield* startScreen.closeStartButton();
             // yield driver.sleep(1000);
             var ele = yield driver.elementByName('我的蜂巢');
             yield ele.click();
             var elements = yield driver.elementByClassName('XCUIElementTypeTable').elementsByClassName('>', 'XCUIElementTypeCell');
-            elements.should.have.lengthOf(11)
+            elements.should.have.lengthOf(11);
             // yield *personalCenterScreen.clickLoginButton();
             // yield driver.sleep(5000);
             done();
         });
     });
-
 });
