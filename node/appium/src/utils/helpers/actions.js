@@ -8,8 +8,9 @@ exports.swipe = function (opts) {
   action
     .press({x: opts.startX, y: opts.startY})
     .wait(opts.duration)
-    .moveTo({x: opts.endX, y: opts.endY})
+    .moveTo({x: opts.offsetX, y: opts.offsetY})
     .release();
+  action.driver = this;
   return this.performTouchAction(action);
 };
 
