@@ -1,7 +1,7 @@
 "use strict";
 
 var Q = require('q'),
-    _ = require('underscore');
+  _ = require('underscore');
 
 exports.each = function (fn) {
   return function (els) {
