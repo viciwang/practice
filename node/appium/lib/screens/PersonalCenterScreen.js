@@ -19,5 +19,10 @@ class PersonalCenterScreen extends _BaseScreen2.default {
             ele.click();
         }
     }
+
+    logout() {
+        return this.driver.elementByName('icon person center setting') // 退出登录
+        .click().elementByName('退出登录').click().acceptAlert().sleep(1000);
+    }
 }
 exports.default = PersonalCenterScreen;

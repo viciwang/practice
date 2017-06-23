@@ -27,3 +27,6 @@ exports.swipe = function (opts) {
   return this.performTouchAction(action);
 };
 ```
+
+###更多sample
+[https://github.com/admc/wd/tree/master/examples/promise](https://github.com/admc/wd/tree/master/examples/promise)

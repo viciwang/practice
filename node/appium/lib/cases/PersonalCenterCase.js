@@ -12,8 +12,6 @@ var _UIElementType = require('../utils/UIElementType');
 
 var _UIElementType2 = _interopRequireDefault(_UIElementType);
 
-require('../utils/helpers/setup');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = require('../app');
@@ -37,7 +35,7 @@ describe("login", function () {
     });
 
     after(function () {
-        // return driver.quit();
+        return driver.quit();
     });
 
     it('should have 11 cells; 我的蜂巢要有11个cell', function () {
@@ -47,28 +45,19 @@ describe("login", function () {
         });
     });
 
-    // it('should print cell name in order', function () {
-    //     return driver
-    //         .elementByClassName(XCUIElementType.Table)
-    //         .elementsByClassName('>', XCUIElementType.Cell)
-    //         .then(_p.each((el, i) => {
-    //             if (titles[i] == "") {
-    //                 return driver;
-    //             }
-    //             // 这里不需要加 '>'，因为调用方是element，其上下文已经可以确定是当前元素了
-    //             return el.elementsByClassName(XCUIElementType.StaticText)
-    //                 // various checks
-    //                 .first().getAttribute('value')
-    //                 .should.become(titles[i]);
-    //         }));
-    // })
+    it('should print cell name in order', function () {
+        return driver.elementByClassName(_UIElementType2.default.Table).elementsByClassName('>', _UIElementType2.default.Cell).then(_p.each((el, i) => {
+            if (titles[i] == "") {
+                return driver;
+            }
+            // 这里不需要加 '>'，因为调用方是element，其上下文已经可以确定是当前元素了
+            return el.elementsByClassName(_UIElementType2.default.StaticText)
+            // various checks
+            .first().getAttribute('value').should.become(titles[i]);
+        }));
+    });
 
     it('should show login view', () => {
-        // return driver
-        //                         .elementByClassName(XCUIElementType.Table)
-        //                         .then(() => {
-
-        //                         });
         return driver.elementByClassName(_UIElementType2.default.Table).elementsByClassName('>', _UIElementType2.default.Cell).then(_p.each((el, i) => {
             if (checkFlag[i] == 0) {
                 return driver;
