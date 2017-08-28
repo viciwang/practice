@@ -8,11 +8,11 @@ var mysql = require('mysql');
 var myConnection = require('express-myconnection');
 
 var dbOptions = {
-  host: 'localhost',
-  user: 'root',
-  password: 'abc123456',
-  port: 3306,
-  database: 'movie'
+    host: 'localhost',
+    user: 'root',
+    password: 'abc123456',
+    port: 3306,
+    database: 'mysql'
 };
 
 var index = require('./routes/index');
@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // mysql
-// app.use(myConnection(mysql, dbOptions, 'single'));
+app.use(myConnection(mysql, dbOptions, 'single'));
 
 app.use('/', index);
 app.use('/users', users);
@@ -44,20 +44,20 @@ app.use('/admin', admin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
 
 module.exports = app;
