@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5026506DC0B9554DD7B8D3A9 /* Pods_So_Vocabulary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057BF5CC916BDE2251C93D46 /* Pods_So_Vocabulary.framework */; };
-		FAB2D9031F57A4480042B6E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2D9021F57A4480042B6E6 /* AppDelegate.swift */; };
-		FAB2D9051F57A4480042B6E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2D9041F57A4480042B6E6 /* ViewController.swift */; };
-		FAB2D9081F57A4480042B6E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB2D9061F57A4480042B6E6 /* Main.storyboard */; };
-		FAB2D90A1F57A4480042B6E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB2D9091F57A4480042B6E6 /* Assets.xcassets */; };
-		FAB2D90D1F57A4480042B6E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB2D90B1F57A4480042B6E6 /* LaunchScreen.storyboard */; };
+		FAB2D91E1F5807600042B6E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2D9151F5807600042B6E6 /* AppDelegate.swift */; };
+		FAB2D9231F5807CC0042B6E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB2D9171F5807600042B6E6 /* Assets.xcassets */; };
+		FAB2D9241F5807DA0042B6E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB2D9191F5807600042B6E6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +18,10 @@
 		81179FA7B95AADE99E43F340 /* Pods-So-Vocabulary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-So-Vocabulary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-So-Vocabulary/Pods-So-Vocabulary.debug.xcconfig"; sourceTree = "<group>"; };
 		BFA8F0C7553C1708AE886AEC /* Pods-So-Vocabulary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-So-Vocabulary.release.xcconfig"; path = "Pods/Target Support Files/Pods-So-Vocabulary/Pods-So-Vocabulary.release.xcconfig"; sourceTree = "<group>"; };
 		FAB2D8FF1F57A4480042B6E6 /* So-Vocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "So-Vocabulary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAB2D9021F57A4480042B6E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAB2D9041F57A4480042B6E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FAB2D9071F57A4480042B6E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FAB2D9091F57A4480042B6E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FAB2D90C1F57A4480042B6E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FAB2D90E1F57A4480042B6E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB2D9151F5807600042B6E6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAB2D9171F5807600042B6E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAB2D91A1F5807600042B6E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAB2D91D1F5807600042B6E6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +74,36 @@
 		FAB2D9011F57A4480042B6E6 /* So-Vocabulary */ = {
 			isa = PBXGroup;
 			children = (
-				FAB2D9021F57A4480042B6E6 /* AppDelegate.swift */,
-				FAB2D9041F57A4480042B6E6 /* ViewController.swift */,
-				FAB2D9061F57A4480042B6E6 /* Main.storyboard */,
-				FAB2D9091F57A4480042B6E6 /* Assets.xcassets */,
-				FAB2D90B1F57A4480042B6E6 /* LaunchScreen.storyboard */,
-				FAB2D90E1F57A4480042B6E6 /* Info.plist */,
+				FAB2D9141F5807600042B6E6 /* AppDelegate */,
+				FAB2D9161F5807600042B6E6 /* Resources */,
+				FAB2D9181F5807600042B6E6 /* SupportFiles */,
 			);
 			path = "So-Vocabulary";
+			sourceTree = "<group>";
+		};
+		FAB2D9141F5807600042B6E6 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2D9151F5807600042B6E6 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FAB2D9161F5807600042B6E6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2D9171F5807600042B6E6 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FAB2D9181F5807600042B6E6 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2D9191F5807600042B6E6 /* LaunchScreen.storyboard */,
+				FAB2D91D1F5807600042B6E6 /* Info.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +169,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB2D90D1F57A4480042B6E6 /* LaunchScreen.storyboard in Resources */,
-				FAB2D90A1F57A4480042B6E6 /* Assets.xcassets in Resources */,
-				FAB2D9081F57A4480042B6E6 /* Main.storyboard in Resources */,
+				FAB2D9231F5807CC0042B6E6 /* Assets.xcassets in Resources */,
+				FAB2D9241F5807DA0042B6E6 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,26 +229,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB2D9051F57A4480042B6E6 /* ViewController.swift in Sources */,
-				FAB2D9031F57A4480042B6E6 /* AppDelegate.swift in Sources */,
+				FAB2D91E1F5807600042B6E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FAB2D9061F57A4480042B6E6 /* Main.storyboard */ = {
+		FAB2D9191F5807600042B6E6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FAB2D9071F57A4480042B6E6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FAB2D90B1F57A4480042B6E6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAB2D90C1F57A4480042B6E6 /* Base */,
+				FAB2D91A1F5807600042B6E6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -338,7 +346,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JX5LFX27DB;
-				INFOPLIST_FILE = "So-Vocabulary/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/So-Vocabulary/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.allen.So-Vocabulary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,7 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JX5LFX27DB;
-				INFOPLIST_FILE = "So-Vocabulary/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/So-Vocabulary/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.allen.So-Vocabulary";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,6 +387,7 @@
 				FAB2D9131F57A4480042B6E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
