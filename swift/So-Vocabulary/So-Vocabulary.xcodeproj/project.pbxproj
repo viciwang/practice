@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5026506DC0B9554DD7B8D3A9 /* Pods_So_Vocabulary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057BF5CC916BDE2251C93D46 /* Pods_So_Vocabulary.framework */; };
 		FAB2D9031F57A4480042B6E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2D9021F57A4480042B6E6 /* AppDelegate.swift */; };
 		FAB2D9051F57A4480042B6E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2D9041F57A4480042B6E6 /* ViewController.swift */; };
 		FAB2D9081F57A4480042B6E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB2D9061F57A4480042B6E6 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		057BF5CC916BDE2251C93D46 /* Pods_So_Vocabulary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_So_Vocabulary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81179FA7B95AADE99E43F340 /* Pods-So-Vocabulary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-So-Vocabulary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-So-Vocabulary/Pods-So-Vocabulary.debug.xcconfig"; sourceTree = "<group>"; };
+		BFA8F0C7553C1708AE886AEC /* Pods-So-Vocabulary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-So-Vocabulary.release.xcconfig"; path = "Pods/Target Support Files/Pods-So-Vocabulary/Pods-So-Vocabulary.release.xcconfig"; sourceTree = "<group>"; };
 		FAB2D8FF1F57A4480042B6E6 /* So-Vocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "So-Vocabulary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB2D9021F57A4480042B6E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB2D9041F57A4480042B6E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5026506DC0B9554DD7B8D3A9 /* Pods_So_Vocabulary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		78B04340FDB90FC69D5F4E41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				057BF5CC916BDE2251C93D46 /* Pods_So_Vocabulary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEBABACC575C11D56C54D0E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81179FA7B95AADE99E43F340 /* Pods-So-Vocabulary.debug.xcconfig */,
+				BFA8F0C7553C1708AE886AEC /* Pods-So-Vocabulary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FAB2D8F61F57A4480042B6E6 = {
 			isa = PBXGroup;
 			children = (
 				FAB2D9011F57A4480042B6E6 /* So-Vocabulary */,
 				FAB2D9001F57A4480042B6E6 /* Products */,
+				BEBABACC575C11D56C54D0E4 /* Pods */,
+				78B04340FDB90FC69D5F4E41 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAB2D9111F57A4480042B6E6 /* Build configuration list for PBXNativeTarget "So-Vocabulary" */;
 			buildPhases = (
+				07BA7E1B4656AE35C13ECB79 /* [CP] Check Pods Manifest.lock */,
 				FAB2D8FB1F57A4480042B6E6 /* Sources */,
 				FAB2D8FC1F57A4480042B6E6 /* Frameworks */,
 				FAB2D8FD1F57A4480042B6E6 /* Resources */,
+				1EC6AB14FD9A03603F8DD94E /* [CP] Embed Pods Frameworks */,
+				314EBEDBC966DB8158766569 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07BA7E1B4656AE35C13ECB79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1EC6AB14FD9A03603F8DD94E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-So-Vocabulary/Pods-So-Vocabulary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		314EBEDBC966DB8158766569 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-So-Vocabulary/Pods-So-Vocabulary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAB2D8FB1F57A4480042B6E6 /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		FAB2D9121F57A4480042B6E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81179FA7B95AADE99E43F340 /* Pods-So-Vocabulary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JX5LFX27DB;
@@ -272,6 +348,7 @@
 		};
 		FAB2D9131F57A4480042B6E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFA8F0C7553C1708AE886AEC /* Pods-So-Vocabulary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JX5LFX27DB;
