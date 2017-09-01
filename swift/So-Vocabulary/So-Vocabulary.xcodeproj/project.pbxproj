@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5026506DC0B9554DD7B8D3A9 /* Pods_So_Vocabulary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 057BF5CC916BDE2251C93D46 /* Pods_So_Vocabulary.framework */; };
+		FA4FFDED1F59457C00EA15C2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4FFDEC1F59457C00EA15C2 /* TabBarController.swift */; };
 		FAB2D91E1F5807600042B6E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2D9151F5807600042B6E6 /* AppDelegate.swift */; };
 		FAB2D9231F5807CC0042B6E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB2D9171F5807600042B6E6 /* Assets.xcassets */; };
 		FAB2D9241F5807DA0042B6E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB2D9191F5807600042B6E6 /* LaunchScreen.storyboard */; };
+		FAB2D92F1F58FED90042B6E6 /* VocabularyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB2D92E1F58FED90042B6E6 /* VocabularyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		057BF5CC916BDE2251C93D46 /* Pods_So_Vocabulary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_So_Vocabulary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81179FA7B95AADE99E43F340 /* Pods-So-Vocabulary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-So-Vocabulary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-So-Vocabulary/Pods-So-Vocabulary.debug.xcconfig"; sourceTree = "<group>"; };
 		BFA8F0C7553C1708AE886AEC /* Pods-So-Vocabulary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-So-Vocabulary.release.xcconfig"; path = "Pods/Target Support Files/Pods-So-Vocabulary/Pods-So-Vocabulary.release.xcconfig"; sourceTree = "<group>"; };
+		FA4FFDEC1F59457C00EA15C2 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = TabBar/TabBarController.swift; sourceTree = "<group>"; };
 		FAB2D8FF1F57A4480042B6E6 /* So-Vocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "So-Vocabulary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB2D9151F5807600042B6E6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAB2D9171F5807600042B6E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAB2D91A1F5807600042B6E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAB2D91D1F5807600042B6E6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB2D92E1F58FED90042B6E6 /* VocabularyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabularyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FA4FFDEB1F59453F00EA15C2 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FFDEC1F59457C00EA15C2 /* TabBarController.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		FA4FFDEE1F594CB100EA15C2 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Http;
+			sourceTree = "<group>";
+		};
 		FAB2D8F61F57A4480042B6E6 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +93,7 @@
 		FAB2D9011F57A4480042B6E6 /* So-Vocabulary */ = {
 			isa = PBXGroup;
 			children = (
+				FAB2D92B1F58FED90042B6E6 /* Classes */,
 				FAB2D9141F5807600042B6E6 /* AppDelegate */,
 				FAB2D9161F5807600042B6E6 /* Resources */,
 				FAB2D9181F5807600042B6E6 /* SupportFiles */,
@@ -104,6 +124,32 @@
 				FAB2D91D1F5807600042B6E6 /* Info.plist */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		FAB2D92B1F58FED90042B6E6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FFDEB1F59453F00EA15C2 /* TabBar */,
+				FAB2D92C1F58FED90042B6E6 /* CoreModule */,
+				FAB2D92D1F58FED90042B6E6 /* Vocabulary */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FAB2D92C1F58FED90042B6E6 /* CoreModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA4FFDEE1F594CB100EA15C2 /* Http */,
+			);
+			path = CoreModule;
+			sourceTree = "<group>";
+		};
+		FAB2D92D1F58FED90042B6E6 /* Vocabulary */ = {
+			isa = PBXGroup;
+			children = (
+				FAB2D92E1F58FED90042B6E6 /* VocabularyViewController.swift */,
+			);
+			path = Vocabulary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +275,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4FFDED1F59457C00EA15C2 /* TabBarController.swift in Sources */,
+				FAB2D92F1F58FED90042B6E6 /* VocabularyViewController.swift in Sources */,
 				FAB2D91E1F5807600042B6E6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

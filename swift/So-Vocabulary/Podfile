@@ -7,4 +7,6 @@ target 'So-Vocabulary' do
 
   # Pods for So-Vocabulary
   pod 'Alamofire', '~> 4.5.0'
+  pod 'SnapKit', '~> 3.2.0'
+  
 end
