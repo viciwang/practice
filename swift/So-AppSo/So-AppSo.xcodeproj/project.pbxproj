@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F293EDD1F5311A70061E380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F293EDC1F5311A70061E380 /* AppDelegate.swift */; };
-		9F293EDF1F5311A70061E380 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F293EDE1F5311A70061E380 /* ViewController.swift */; };
-		9F293EE21F5311A70061E380 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F293EE01F5311A70061E380 /* Main.storyboard */; };
-		9F293EE41F5311A70061E380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F293EE31F5311A70061E380 /* Assets.xcassets */; };
-		9F293EE71F5311A70061E380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F293EE51F5311A70061E380 /* LaunchScreen.storyboard */; };
 		DDA1DB8C638492A77FB9F54D /* Pods_So_AppSo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9226161422AF43125F4653E7 /* Pods_So_AppSo.framework */; };
+		FACA0F481F627C1600160811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA0F3A1F627C1600160811 /* AppDelegate.swift */; };
+		FACA0F491F627C1600160811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACA0F3F1F627C1600160811 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +17,10 @@
 		7C1D7259714D48DD2E7C1F7B /* Pods-So-AppSo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-So-AppSo.release.xcconfig"; path = "Pods/Target Support Files/Pods-So-AppSo/Pods-So-AppSo.release.xcconfig"; sourceTree = "<group>"; };
 		9226161422AF43125F4653E7 /* Pods_So_AppSo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_So_AppSo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F293ED91F5311A70061E380 /* So-AppSo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "So-AppSo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F293EDC1F5311A70061E380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F293EDE1F5311A70061E380 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9F293EE11F5311A70061E380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9F293EE31F5311A70061E380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9F293EE61F5311A70061E380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9F293EE81F5311A70061E380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACA0F3A1F627C1600160811 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FACA0F3F1F627C1600160811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FACA0F411F627C1600160811 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FACA0F471F627C1600160811 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,14 +73,60 @@
 		9F293EDB1F5311A70061E380 /* So-AppSo */ = {
 			isa = PBXGroup;
 			children = (
-				9F293EDC1F5311A70061E380 /* AppDelegate.swift */,
-				9F293EDE1F5311A70061E380 /* ViewController.swift */,
-				9F293EE01F5311A70061E380 /* Main.storyboard */,
-				9F293EE31F5311A70061E380 /* Assets.xcassets */,
-				9F293EE51F5311A70061E380 /* LaunchScreen.storyboard */,
-				9F293EE81F5311A70061E380 /* Info.plist */,
+				FACA0F391F627C1600160811 /* AppDelegate */,
+				FACA0F3B1F627C1600160811 /* Classes */,
+				FACA0F3E1F627C1600160811 /* Resources */,
+				FACA0F441F627C1600160811 /* SupportFiles */,
 			);
 			path = "So-AppSo";
+			sourceTree = "<group>";
+		};
+		FACA0F391F627C1600160811 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				FACA0F3A1F627C1600160811 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FACA0F3B1F627C1600160811 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FACA0F3C1F627C1600160811 /* CoreModule */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FACA0F3C1F627C1600160811 /* CoreModule */ = {
+			isa = PBXGroup;
+			children = (
+				FACA0F3D1F627C1600160811 /* Http */,
+			);
+			path = CoreModule;
+			sourceTree = "<group>";
+		};
+		FACA0F3D1F627C1600160811 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		FACA0F3E1F627C1600160811 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FACA0F3F1F627C1600160811 /* Assets.xcassets */,
+				FACA0F401F627C1600160811 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FACA0F441F627C1600160811 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FACA0F471F627C1600160811 /* Info.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F293EE71F5311A70061E380 /* LaunchScreen.storyboard in Resources */,
-				9F293EE41F5311A70061E380 /* Assets.xcassets in Resources */,
-				9F293EE21F5311A70061E380 /* Main.storyboard in Resources */,
+				FACA0F491F627C1600160811 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,13 +205,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-So-AppSo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEDA816E89D19BA4F7FEA3CC /* [CP] Embed Pods Frameworks */ = {
@@ -181,9 +223,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-So-AppSo/Pods-So-AppSo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -212,26 +263,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F293EDF1F5311A70061E380 /* ViewController.swift in Sources */,
-				9F293EDD1F5311A70061E380 /* AppDelegate.swift in Sources */,
+				FACA0F481F627C1600160811 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9F293EE01F5311A70061E380 /* Main.storyboard */ = {
+		FACA0F401F627C1600160811 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9F293EE11F5311A70061E380 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9F293EE51F5311A70061E380 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9F293EE61F5311A70061E380 /* Base */,
+				FACA0F411F627C1600160811 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -338,7 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JX5LFX27DB;
-				INFOPLIST_FILE = "So-AppSo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/So-AppSo/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.allen.So-AppSo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,7 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JX5LFX27DB;
-				INFOPLIST_FILE = "So-AppSo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/So-AppSo/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.allen.So-AppSo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,6 +421,7 @@
 				9F293EED1F5311A70061E380 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
