@@ -10,6 +10,10 @@
 		DDA1DB8C638492A77FB9F54D /* Pods_So_AppSo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9226161422AF43125F4653E7 /* Pods_So_AppSo.framework */; };
 		FACA0F481F627C1600160811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA0F3A1F627C1600160811 /* AppDelegate.swift */; };
 		FACA0F491F627C1600160811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACA0F3F1F627C1600160811 /* Assets.xcassets */; };
+		FACA0F501F627DF400160811 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA0F4F1F627DF400160811 /* Networking.swift */; };
+		FACA0F531F6281D200160811 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA0F521F6281D200160811 /* GlobalFunctions.swift */; };
+		FACA0F551F6284B600160811 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA0F541F6284B600160811 /* ApiKey.swift */; };
+		FACA0F571F62A42B00160811 /* AppsoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA0F561F62A42B00160811 /* AppsoAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,10 @@
 		FACA0F3F1F627C1600160811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACA0F411F627C1600160811 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FACA0F471F627C1600160811 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FACA0F4F1F627DF400160811 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Networking.swift; path = Networking/Networking.swift; sourceTree = "<group>"; };
+		FACA0F521F6281D200160811 /* GlobalFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalFunctions.swift; path = Global/GlobalFunctions.swift; sourceTree = "<group>"; };
+		FACA0F541F6284B600160811 /* ApiKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiKey.swift; path = Networking/ApiKey.swift; sourceTree = "<group>"; };
+		FACA0F561F62A42B00160811 /* AppsoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppsoAPI.swift; path = Networking/AppsoAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,16 +108,10 @@
 		FACA0F3C1F627C1600160811 /* CoreModule */ = {
 			isa = PBXGroup;
 			children = (
-				FACA0F3D1F627C1600160811 /* Http */,
+				FACA0F511F6281A500160811 /* Global */,
+				FACA0F4E1F627DC500160811 /* Networking */,
 			);
 			path = CoreModule;
-			sourceTree = "<group>";
-		};
-		FACA0F3D1F627C1600160811 /* Http */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Http;
 			sourceTree = "<group>";
 		};
 		FACA0F3E1F627C1600160811 /* Resources */ = {
@@ -127,6 +129,24 @@
 				FACA0F471F627C1600160811 /* Info.plist */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		FACA0F4E1F627DC500160811 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FACA0F4F1F627DF400160811 /* Networking.swift */,
+				FACA0F541F6284B600160811 /* ApiKey.swift */,
+				FACA0F561F62A42B00160811 /* AppsoAPI.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		FACA0F511F6281A500160811 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				FACA0F521F6281D200160811 /* GlobalFunctions.swift */,
+			);
+			name = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +246,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-So-AppSo/Pods-So-AppSo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
@@ -233,6 +254,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -264,6 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACA0F481F627C1600160811 /* AppDelegate.swift in Sources */,
+				FACA0F501F627DF400160811 /* Networking.swift in Sources */,
+				FACA0F551F6284B600160811 /* ApiKey.swift in Sources */,
+				FACA0F531F6281D200160811 /* GlobalFunctions.swift in Sources */,
+				FACA0F571F62A42B00160811 /* AppsoAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

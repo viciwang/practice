@@ -8,4 +8,5 @@ target 'So-AppSo' do
   # Pods for So-AppSo
   pod 'RxSwift'
   pod 'Moya/RxSwift'
+  pod 'ReachabilitySwift'
 end
