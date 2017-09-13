@@ -12,23 +12,60 @@ import RxSwift
 import Alamofire
 
 //class OnlineProvider<Target>: RxMoyaProvider<Target> where Target: TargetType {
-//    
+//
 //    fileprivate let online: Observable<Bool>
-//    
+//
 //}
 
-class Networking {
+//struct Networking<Target> where Target: TargetType {
+//
+//    static let shared =
+//
+//    func request(_ token: Target) -> Single<Moya.Response> {
+//        return Networking.provider.rx.request(token)
+//    }
+//
+//}
+
+class OnlineProvider<Target>: RxMoyaProvider<Target> where Target: TargetType {
     
-//    fileprivate let online: Observable<Bool> = 
-    let provider = MoyaProvider<AppsoAPI>()
+    fileprivate let online: Observable<Bool>
     
+    init(endpointClosure: @escaping EndpointClosure = MoyaProvider.defaultEndpointMapping,
+         requestClosure: @escaping RequestClosure = MoyaProvider.defaultRequestMapping,
+         stubClosure: @escaping StubClosure = MoyaProvider.neverStub,
+         callbackQueue: DispatchQueue? = nil,
+         manager: Manager = RxMoyaProvider<Target>.defaultAlamofireManager(),
+         plugins: [PluginType] = [],
+         trackInflights: Bool = false,
+         online: Observable<Bool> = connectedToInternetOrStubbing()) {
+        
+        self.online = online
+        super.init(endpointClosure: endpointClosure, requestClosure: requestClosure, stubClosure: stubClosure, callbackQueue: callbackQueue, manager: manager, plugins: plugins, trackInflights: trackInflights)
+    }
+    
+    override func request(_ token: Target, callbackQueue: DispatchQueue? = nil) -> Single<Response> {
+        let actualRequest = super.request(token)
+        return online
+            .filter { $0 }
+            .take(1)
+            .asSingle()
+            .flatMap { _ in actualRequest }
+    }
+}
+
+struct Networking {
+    
+    static let shared: Networking = {
+        return Networking(provider: OnlineProvider<AppsoAPI>())
+    }()
+    
+    let provider: OnlineProvider<AppsoAPI>
 }
 
 extension Networking {
     
-    
-    
-    static func request() {
-        
+    func request(_ token: AppsoAPI) -> Single<Response> {
+        return provider.request(token)
     }
 }

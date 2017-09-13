@@ -17,4 +17,32 @@ enum AppsoAPI {
 
 extension AppsoAPI: TargetType {
     
+    var baseURL: URL { return URL(string: "")! }
+    
+    var path: String {
+        switch self {
+        case .start:
+            return "123"
+        }
+    }
+    
+    var method: Moya.Method {
+        return .get
+    }
+    
+    var sampleData: Data {
+        return Data()
+    }
+    
+    var task: Task {
+        return .requestPlain
+    }
+    
+    var validate: Bool {
+        return true
+    }
+    
+    var headers: [String : String]? {
+        return nil
+    }
 }
