@@ -11,22 +11,6 @@ import Moya
 import RxSwift
 import Alamofire
 
-//class OnlineProvider<Target>: RxMoyaProvider<Target> where Target: TargetType {
-//
-//    fileprivate let online: Observable<Bool>
-//
-//}
-
-//struct Networking<Target> where Target: TargetType {
-//
-//    static let shared =
-//
-//    func request(_ token: Target) -> Single<Moya.Response> {
-//        return Networking.provider.rx.request(token)
-//    }
-//
-//}
-
 class OnlineProvider<Target>: RxMoyaProvider<Target> where Target: TargetType {
     
     fileprivate let online: Observable<Bool>
@@ -41,7 +25,13 @@ class OnlineProvider<Target>: RxMoyaProvider<Target> where Target: TargetType {
          online: Observable<Bool> = connectedToInternetOrStubbing()) {
         
         self.online = online
-        super.init(endpointClosure: endpointClosure, requestClosure: requestClosure, stubClosure: stubClosure, callbackQueue: callbackQueue, manager: manager, plugins: plugins, trackInflights: trackInflights)
+        super.init(endpointClosure: endpointClosure,
+                   requestClosure: requestClosure,
+                   stubClosure: stubClosure,
+                   callbackQueue: callbackQueue,
+                   manager: manager,
+                   plugins: plugins,
+                   trackInflights: trackInflights)
     }
     
     override func request(_ token: Target, callbackQueue: DispatchQueue? = nil) -> Single<Response> {

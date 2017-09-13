@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DDA1DB8C638492A77FB9F54D /* Pods_So_AppSo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9226161422AF43125F4653E7 /* Pods_So_AppSo.framework */; };
+		FA739F331F6937CC001E37C8 /* UITabBarController+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA739F321F6937CC001E37C8 /* UITabBarController+Main.swift */; };
+		FA739F361F693A62001E37C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA739F351F693A62001E37C8 /* HomeViewController.swift */; };
 		FACA0F481F627C1600160811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA0F3A1F627C1600160811 /* AppDelegate.swift */; };
 		FACA0F491F627C1600160811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACA0F3F1F627C1600160811 /* Assets.xcassets */; };
 		FACA0F501F627DF400160811 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA0F4F1F627DF400160811 /* Networking.swift */; };
@@ -21,6 +23,8 @@
 		7C1D7259714D48DD2E7C1F7B /* Pods-So-AppSo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-So-AppSo.release.xcconfig"; path = "Pods/Target Support Files/Pods-So-AppSo/Pods-So-AppSo.release.xcconfig"; sourceTree = "<group>"; };
 		9226161422AF43125F4653E7 /* Pods_So_AppSo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_So_AppSo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F293ED91F5311A70061E380 /* So-AppSo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "So-AppSo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA739F321F6937CC001E37C8 /* UITabBarController+Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITabBarController+Main.swift"; path = "Main/UITabBarController+Main.swift"; sourceTree = "<group>"; };
+		FA739F351F693A62001E37C8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Home/HomeViewController.swift; sourceTree = "<group>"; };
 		FACA0F3A1F627C1600160811 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACA0F3F1F627C1600160811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACA0F411F627C1600160811 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,6 +93,22 @@
 			path = "So-AppSo";
 			sourceTree = "<group>";
 		};
+		FA739F2F1F6936DC001E37C8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA739F321F6937CC001E37C8 /* UITabBarController+Main.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		FA739F341F6939BB001E37C8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FA739F351F693A62001E37C8 /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		FACA0F391F627C1600160811 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +120,8 @@
 		FACA0F3B1F627C1600160811 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FA739F341F6939BB001E37C8 /* Home */,
+				FA739F2F1F6936DC001E37C8 /* Main */,
 				FACA0F3C1F627C1600160811 /* CoreModule */,
 			);
 			path = Classes;
@@ -289,6 +311,8 @@
 				FACA0F501F627DF400160811 /* Networking.swift in Sources */,
 				FACA0F551F6284B600160811 /* ApiKey.swift in Sources */,
 				FACA0F531F6281D200160811 /* GlobalFunctions.swift in Sources */,
+				FA739F331F6937CC001E37C8 /* UITabBarController+Main.swift in Sources */,
+				FA739F361F693A62001E37C8 /* HomeViewController.swift in Sources */,
 				FACA0F571F62A42B00160811 /* AppsoAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
