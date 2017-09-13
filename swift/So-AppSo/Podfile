@@ -9,4 +9,6 @@ target 'So-AppSo' do
   pod 'RxSwift'
   pod 'Moya/RxSwift'
   pod 'ReachabilitySwift'
+  pod 'SnapKit'
+  pod 'RxCocoa'
 end

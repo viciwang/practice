@@ -7,14 +7,35 @@
 //
 
 import UIKit
+import SnapKit
 
 class HomeViewController: UIViewController {
     
-    private let collectionView: UICollectionView! = nil
+    fileprivate var collectionView: UICollectionView! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+}
+
+// MARK: UI stuff
+
+private extension HomeViewController {
+    
+    func setupUI() {
         view.backgroundColor = UIColor.white
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
+        collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { make in
+            make.edges.equalTo(view)
+        }
     }
 }
 
