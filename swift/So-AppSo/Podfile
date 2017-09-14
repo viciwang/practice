@@ -12,4 +12,5 @@ target 'So-AppSo' do
   pod 'SnapKit'
   pod 'RxCocoa'
   pod 'NSObject+Rx'
+  pod 'SwiftyJSON'
 end

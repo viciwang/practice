@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		DDA1DB8C638492A77FB9F54D /* Pods_So_AppSo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9226161422AF43125F4653E7 /* Pods_So_AppSo.framework */; };
+		FA13427A1F6A835900CDE7B0 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1342791F6A835900CDE7B0 /* Article.swift */; };
 		FA739F331F6937CC001E37C8 /* UITabBarController+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA739F321F6937CC001E37C8 /* UITabBarController+Main.swift */; };
 		FA739F361F693A62001E37C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA739F351F693A62001E37C8 /* HomeViewController.swift */; };
 		FA739F391F6A5842001E37C8 /* article.json in Resources */ = {isa = PBXBuildFile; fileRef = FA739F381F6A5842001E37C8 /* article.json */; };
 		FA739F3B1F6A6943001E37C8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA739F3A1F6A6943001E37C8 /* HomeViewModel.swift */; };
+		FA739F3E1F6A78DA001E37C8 /* Single+JSONAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA739F3D1F6A78DA001E37C8 /* Single+JSONAble.swift */; };
 		FACA0F481F627C1600160811 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA0F3A1F627C1600160811 /* AppDelegate.swift */; };
 		FACA0F491F627C1600160811 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACA0F3F1F627C1600160811 /* Assets.xcassets */; };
 		FACA0F501F627DF400160811 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACA0F4F1F627DF400160811 /* Networking.swift */; };
@@ -25,10 +27,12 @@
 		7C1D7259714D48DD2E7C1F7B /* Pods-So-AppSo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-So-AppSo.release.xcconfig"; path = "Pods/Target Support Files/Pods-So-AppSo/Pods-So-AppSo.release.xcconfig"; sourceTree = "<group>"; };
 		9226161422AF43125F4653E7 /* Pods_So_AppSo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_So_AppSo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F293ED91F5311A70061E380 /* So-AppSo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "So-AppSo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA1342791F6A835900CDE7B0 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Article.swift; path = Models/Article.swift; sourceTree = "<group>"; };
 		FA739F321F6937CC001E37C8 /* UITabBarController+Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITabBarController+Main.swift"; path = "Main/UITabBarController+Main.swift"; sourceTree = "<group>"; };
 		FA739F351F693A62001E37C8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Home/HomeViewController.swift; sourceTree = "<group>"; };
 		FA739F381F6A5842001E37C8 /* article.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = article.json; path = StubbedResponse/article.json; sourceTree = "<group>"; };
 		FA739F3A1F6A6943001E37C8 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = Home/HomeViewModel.swift; sourceTree = "<group>"; };
+		FA739F3D1F6A78DA001E37C8 /* Single+JSONAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Single+JSONAble.swift"; path = "RxSwiftExtension/Single+JSONAble.swift"; sourceTree = "<group>"; };
 		FACA0F3A1F627C1600160811 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FACA0F3F1F627C1600160811 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACA0F411F627C1600160811 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,6 +101,14 @@
 			path = "So-AppSo";
 			sourceTree = "<group>";
 		};
+		FA1342781F6A827200CDE7B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA1342791F6A835900CDE7B0 /* Article.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		FA739F2F1F6936DC001E37C8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +134,14 @@
 			name = StubbedResponse;
 			sourceTree = "<group>";
 		};
+		FA739F3C1F6A787A001E37C8 /* RxSwiftExtension */ = {
+			isa = PBXGroup;
+			children = (
+				FA739F3D1F6A78DA001E37C8 /* Single+JSONAble.swift */,
+			);
+			name = RxSwiftExtension;
+			sourceTree = "<group>";
+		};
 		FACA0F391F627C1600160811 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +163,8 @@
 		FACA0F3C1F627C1600160811 /* CoreModule */ = {
 			isa = PBXGroup;
 			children = (
+				FA1342781F6A827200CDE7B0 /* Models */,
+				FA739F3C1F6A787A001E37C8 /* RxSwiftExtension */,
 				FACA0F511F6281A500160811 /* Global */,
 				FACA0F4E1F627DC500160811 /* Networking */,
 			);
@@ -289,6 +311,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -300,6 +323,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,6 +355,8 @@
 				FACA0F481F627C1600160811 /* AppDelegate.swift in Sources */,
 				FACA0F501F627DF400160811 /* Networking.swift in Sources */,
 				FACA0F551F6284B600160811 /* ApiKey.swift in Sources */,
+				FA739F3E1F6A78DA001E37C8 /* Single+JSONAble.swift in Sources */,
+				FA13427A1F6A835900CDE7B0 /* Article.swift in Sources */,
 				FA739F3B1F6A6943001E37C8 /* HomeViewModel.swift in Sources */,
 				FACA0F531F6281D200160811 /* GlobalFunctions.swift in Sources */,
 				FA739F331F6937CC001E37C8 /* UITabBarController+Main.swift in Sources */,

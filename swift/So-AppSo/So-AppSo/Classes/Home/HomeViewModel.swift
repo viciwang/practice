@@ -22,8 +22,16 @@ extension HomeViewModel {
         Networking.shared
             .request(.article)
             .mapJSON()
-            .subscribe(onSuccess: { _ in
-                
+            .map { result -> [Any] in
+                guard let r: [String: AnyObject] = result as? [String: AnyObject],
+                    let articleJSONs: [AnyObject] = r["objects"] as? [AnyObject] else {
+                        throw AppsoError.couldNotParseJSON
+                }
+                return articleJSONs
+            }
+            .mapTo(arrayOf: Article.self)
+            .subscribe(onSuccess: { a in
+                print("\(a)")
             }, onError: { error in
                 
             })
