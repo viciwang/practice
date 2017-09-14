@@ -11,4 +11,5 @@ target 'So-AppSo' do
   pod 'ReachabilitySwift'
   pod 'SnapKit'
   pod 'RxCocoa'
+  pod 'NSObject+Rx'
 end
