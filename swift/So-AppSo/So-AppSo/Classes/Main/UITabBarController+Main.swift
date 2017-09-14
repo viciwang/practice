@@ -12,7 +12,10 @@ extension UITabBarController {
     
     static func main() -> UITabBarController {
         let tab = UITabBarController()
-        tab.viewControllers = [tab.buildViewController(title: "haha"), tab.buildViewController(title: "hhaa"), tab.buildViewController(title: "ahah"), tab.buildViewController(title: "aahh")]
+        tab.viewControllers = [tab.buildViewController(title: "haha"),
+                               tab.buildViewController(title: "hhaa"),
+                               tab.buildViewController(title: "ahah"),
+                               tab.buildViewController(title: "aahh")]
         return tab
     }
     

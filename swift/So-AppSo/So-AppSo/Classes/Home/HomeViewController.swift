@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import RxCocoa
 
 class HomeViewController: UIViewController {
     
@@ -30,6 +31,19 @@ private extension HomeViewController {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(view)
+        }
+        
+        let button = UIButton()
+        button.backgroundColor = UIColor.blue
+        view.addSubview(button)
+        button.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let strongSelf = self else { return }
+            strongSelf.navigationController?.pushViewController(HomeViewController(), animated: true)
+        })
+        .addDisposableTo(rx.disposeBag)
+        button.snp.makeConstraints { make in
+            make.top.left.equalTo(view)
+            make.size.equalTo(CGSize(width: 100, height: 200))
         }
     }
 }
@@ -54,6 +68,7 @@ fileprivate extension UICollectionView {
     
     class func homeCollectionViewWithDelegateDataSource(_ delegateDatasource: HomeViewController) -> UICollectionView {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.backgroundColor = UIColor.white
         collectionView.delegate = delegateDatasource
         collectionView.dataSource = delegateDatasource
         return collectionView;

@@ -12,7 +12,7 @@ import NSObject_Rx
 
 class HomeViewModel: NSObject {
     
-    let articles: Variable<[String]> = Variable([])
+    let articles: Variable<[Article]> = Variable([])
     
 }
 
@@ -30,8 +30,9 @@ extension HomeViewModel {
                 return articleJSONs
             }
             .mapTo(arrayOf: Article.self)
-            .subscribe(onSuccess: { a in
-                print("\(a)")
+            .subscribe(onSuccess: { [weak self] articles in
+                guard let strongSelf = self else { return }
+                strongSelf.articles.value = articles
             }, onError: { error in
                 
             })
