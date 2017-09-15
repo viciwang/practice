@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeArticleCell: UICollectionViewCell {
     
@@ -26,6 +27,7 @@ class HomeArticleCell: UICollectionViewCell {
     func config(withArticle article: Article) {
         titleLabel.text = article.title
         authorLabel.text = article.author.nickname
+        titleImageView.kf.setImage(with: URL(string: article.coverImage.image))
     }
     
     func setupUI() {

@@ -13,7 +13,6 @@ import NSObject_Rx
 class HomeViewModel: NSObject {
     
     let articles: Variable<[Article]> = Variable([])
-    
 }
 
 extension HomeViewModel {

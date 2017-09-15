@@ -119,6 +119,13 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		FA13427E1F6BB52A00CDE7B0 /* VendorExtension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = VendorExtension;
+			sourceTree = "<group>";
+		};
 		FA739F2F1F6936DC001E37C8 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +181,7 @@
 		FACA0F3C1F627C1600160811 /* CoreModule */ = {
 			isa = PBXGroup;
 			children = (
+				FA13427E1F6BB52A00CDE7B0 /* VendorExtension */,
 				FA1342781F6A827200CDE7B0 /* Models */,
 				FA739F3C1F6A787A001E37C8 /* RxSwiftExtension */,
 				FACA0F511F6281A500160811 /* Global */,
@@ -315,6 +323,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-So-AppSo/Pods-So-AppSo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
@@ -327,6 +336,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",

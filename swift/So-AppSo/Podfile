@@ -13,4 +13,5 @@ target 'So-AppSo' do
   pod 'RxCocoa'
   pod 'NSObject+Rx'
   pod 'SwiftyJSON'
+  pod 'Kingfisher'
 end
