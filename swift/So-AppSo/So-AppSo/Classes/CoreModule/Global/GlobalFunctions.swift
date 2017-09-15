@@ -11,6 +11,9 @@ import RxSwift
 import ReachabilitySwift
 import Dispatch
 
+let DeviceWidth = UIScreen.main.bounds.width
+let DeviceHeight = UIScreen.main.bounds.height
+
 private let reachabilityManager = ReachabilityManager()
 
 func connectedToInternetOrStubbing() -> Observable<Bool> {

@@ -12,12 +12,17 @@ import RxCocoa
 
 class HomeViewController: UIViewController {
     
+    enum Id: String {
+        case ArticleCellIdentifier
+    }
+    
     fileprivate lazy var collectionView: UICollectionView = { return .homeCollectionViewWithDelegateDataSource(self) }()
     fileprivate lazy var viewModel: HomeViewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        rxBinding()
         viewModel.loadData()
     }
 }
@@ -32,36 +37,42 @@ private extension HomeViewController {
         collectionView.snp.makeConstraints { make in
             make.edges.equalTo(view)
         }
-        
-        let button = UIButton()
-        button.backgroundColor = UIColor.blue
-        view.addSubview(button)
-        button.rx.tap.subscribe(onNext: { [weak self] _ in
-            guard let strongSelf = self else { return }
-            strongSelf.navigationController?.pushViewController(HomeViewController(), animated: true)
-        })
-        .addDisposableTo(rx.disposeBag)
-        button.snp.makeConstraints { make in
-            make.top.left.equalTo(view)
-            make.size.equalTo(CGSize(width: 100, height: 200))
-        }
+    }
+}
+
+// MARK: Rx binding
+
+private extension HomeViewController {
+    
+    func rxBinding() {
+        viewModel.articles
+            .asObservable()
+            .subscribe(onNext: { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.collectionView.reloadData()
+            })
+            .addDisposableTo(rx.disposeBag)
     }
 }
 
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0;
+        return viewModel.articles.value.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeViewController.Id.ArticleCellIdentifier.rawValue, for: indexPath) as! HomeArticleCell
+        cell.config(withArticle: viewModel.articles.value[indexPath.item])
         return cell
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate {
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: DeviceWidth, height: 160)
+    }
 }
 
 fileprivate extension UICollectionView {
@@ -71,6 +82,7 @@ fileprivate extension UICollectionView {
         collectionView.backgroundColor = UIColor.white
         collectionView.delegate = delegateDatasource
         collectionView.dataSource = delegateDatasource
+        collectionView.register(HomeArticleCell.self, forCellWithReuseIdentifier: HomeViewController.Id.ArticleCellIdentifier.rawValue)
         return collectionView;
     }
 }
