@@ -4,6 +4,15 @@ var favicon = require("serve-favicon");
 var logger = require("morgan");
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
+var mysql = require("mysql");
+var myConnection = require("express-myconnection");
+var dbOptions = {
+  host: "localhost",
+  user: "root",
+  password: "abc123456",
+  port: 3306,
+  database: "soappso"
+};
 
 var index = require("./routes/index");
 var users = require("./routes/users");
@@ -22,6 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(myConnection(mysql, dbOptions, "single"));
 
 app.use("/", index);
 app.use("/users", users);
