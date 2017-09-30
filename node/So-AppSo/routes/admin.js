@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var Administator = require("../models/administator");
+var models = require("../models");
 
 router.get("/", function(req, res, next) {
   req.getConnection(function(err, connection) {
@@ -13,15 +13,19 @@ router.get("/", function(req, res, next) {
 });
 
 router.get("/create", (req, res, next) => {
-  Administator.create({
-    id: new Date().toTimeString,
-    nickName: "123",
-    password: "abc"
-  });
+  models.Administrator
+    .create({
+      adminId: new Date().toTimeString(),
+      nickName: "123",
+      password: "abc"
+    })
+    .then(() => {
+      res.send("OK");
+    });
 });
 
 router.get("/list", (req, res, next) => {
-  models.Administator.findAll().then(administators => {
+  models.Administrator.findAll().then(administators => {
     res.send(administators);
   });
 });
