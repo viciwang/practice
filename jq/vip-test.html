@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form id="fileupload" method="POST" enctype="multipart/form-data">
+        <input id="fileupload1" type="file" name="list1[]">
+        <input type="file" name="list2[]">
+        <div class="haha">hahah</div>
+    </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- The jQuery UI widget factory, can be omitted if jQuery UI is already included -->
+<script src="js/vendor/jquery.ui.widget.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="js/jquery.fileupload.js"></script>
+
+<script>
+    $(function () {
+    'use strict';
+    // Change this to the location of your server-side upload handler:
+    var url = window.location.hostname === 'blueimp.github.io';
+    $('#fileupload').fileupload({
+        url: "http://allen.com",
+        dataType: 'json',
+        type: 'POST',
+        formData: {'ok': '123'},
+        singleFileUploads: false,
+        autoUpload: false,
+        multipart: true,
+        // add: function(e, data) {
+        //     $('.haha').click(function(){
+        //         data.submit();
+        //     });
+        // }
+    });
+});
+</script>
+</html>
